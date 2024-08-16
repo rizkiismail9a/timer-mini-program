@@ -1,0 +1,23 @@
+<form onSubmit="setTimer">
+  <view class="input-wrapper">
+    <view class="input-number">
+      <input placeholder="input minutes" type="number" name="minutes" maxlength="2" />
+    </view>
+    <view>
+      :
+    </view>
+    <view class="input-number">
+      <input placeholder="input seconds" type="number" name="seconds" maxlength="2" />
+    </view>
+  </view>
+  <button size="default" type="primary" form-type="submit">
+    Create timer
+  </button>
+</form>
+<view class="counter-container">
+  <view a:if="{{ timeRemain }}" class="time-bar" style="height: {{barHeight}}%">
+  </view>
+  <text class="remain-text">
+    {{minutes}}
+  </text>
+</view>
